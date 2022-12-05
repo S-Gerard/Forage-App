@@ -28,11 +28,11 @@ interface ForageableDao {
 
     // TODO: implement a method to retrieve all Forageables from the database
     @Query("SELECT * from forageable_database ORDER BY name ASC")
-    fun getItems(): Flow<List<Forageable>>
+    fun getForageables(): Flow<List<Forageable>>
 
     // TODO: implement a method to retrieve a Forageable from the database by id
     @Query("SELECT * from forageable_database WHERE id = :id")
-    fun getItem(id: Int): Flow<Forageable>
+    fun getForageable(id: Long): Flow<Forageable>
 
     // TODO: implement a method to insert a Forageable into the database
     //  (use OnConflictStrategy.REPLACE)
